@@ -152,18 +152,24 @@ for(f1_sn in 1:17){
 
 
 
-################individual team name#######################################
-#df <- playerdata[playerdata$Squad == "Getafe",]
-#df2 <- playerdata[playerdata$Squad == "Real Madrid",]
-#temp_players <- rbind(df,df2)
-#temp_players <- temp_players[order(temp_players$Ycd, decreasing = T),]
-#write.xlsx(temp_players,'Temp/getafevsreal.xlsx')
-
-
-
-
-
-
+###############individual team name#######################################
+# library(xlsx)
+# df <- playerdata[playerdata$Squad == "Villarreal",]
+# df2 <- playerdata[playerdata$Squad == "Real Sociedad",]
+#
+# ef <- playerdata2[playerdata2$Squad == "Villarreal",]
+# ef2 <- playerdata2[playerdata2$Squad == "Real Sociedad",]
+#
+# temp_players <- rbind(df,df2)
+# temp_players <- temp_players[order(temp_players$YCrd, decreasing = T),]
+#
+# etemp_players <- rbind(ef,ef2)
+# etemp_players <- etemp_players[order(etemp_players$Gls, decreasing = T),]
+#
+#
+# write.xlsx(temp_players,'Temp/villarrealsociedad.xlsx')
+# write.xlsx(etemp_players,'Temp/villarrealsociedad.xlsx',sheetName = "sheet2",append = TRUE)
+#
 
 
 

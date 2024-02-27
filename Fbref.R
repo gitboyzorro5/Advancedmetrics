@@ -136,13 +136,14 @@ bundesligasquad2$Squad <- mgsub(bundesligasquad2$Squad,c("Darmstadt 98","Eint Fr
 serieasquad$Squad <- mgsub(serieasquad$Squad,c("Hellas Verona"),c("Verona"))
 serieasquad2$Squad <- mgsub(serieasquad2$Squad,c("Hellas Verona"),c("Verona"))
 
-laligasquad$Squad <- mgsub(laligasquad$Squad,c("Alavés","Almería","Athletic Club","Atlético Madrid","Cádiz","Celta Vigo","Rayo Vallecano"),c("Alaves","Almeria","Ath Bilbao","Ath Madrid","Cadiz","Celta","Vallecano"))
-laligasquad2$Squad <- mgsub(laligasquad2$Squad,c("Alavés","Almería","Athletic Club","Atlético Madrid","Cádiz","Celta Vigo","Rayo Vallecano"),c("Alaves","Almeria","Ath Bilbao","Ath Madrid","Cadiz","Celta","Vallecano"))
+laligasquad$Squad <- mgsub(laligasquad$Squad,c("Alavés","Almería","Athletic Club","Atlético Madrid","Cádiz","Celta Vigo","Rayo Vallecano","Real Sociedad"),c("Alaves","Almeria","Ath Bilbao","Ath Madrid","Cadiz","Celta","Vallecano","Sociedad"))
+laligasquad2$Squad <- mgsub(laligasquad2$Squad,c("Alavés","Almería","Athletic Club","Atlético Madrid","Cádiz","Celta Vigo","Rayo Vallecano","Real Sociedad"),c("Alaves","Almeria","Ath Bilbao","Ath Madrid","Cadiz","Celta","Vallecano","Sociedad"))
 
 ligueonesquad$Squad <- mgsub(ligueonesquad$Squad,c("Paris S-G"),c("Paris SG"))
 ligueonesquad2$Squad <- mgsub(ligueonesquad2$Squad,c("Paris S-G"),c("Paris SG"))
 
 
+playerdata$Squad
 
 
 
