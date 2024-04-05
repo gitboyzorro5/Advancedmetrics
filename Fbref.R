@@ -143,7 +143,39 @@ ligueonesquad$Squad <- mgsub(ligueonesquad$Squad,c("Paris S-G"),c("Paris SG"))
 ligueonesquad2$Squad <- mgsub(ligueonesquad2$Squad,c("Paris S-G"),c("Paris SG"))
 
 
-playerdata$Squad
+
+Sys.setenv(JAVA_HOME ="C:\\Program Files\\Java\\jre1.8.0_221")
+unlink("eplsquad.xlsx")
+unlink("eplsquad2.xlsx")
+unlink("bundesligasquad.xlsx")
+unlink("bundesligasquad2.xlsx")
+unlink("serieasquad.xlsx")
+unlink("serieasquad2.xlsx")
+unlink("laligasquad.xlsx")
+unlink("laligasquad2.xlsx")
+unlink("ligueonequad.xlsx")
+unlink("ligueonesquad2.xlsx")
+
+library('xlsx')
+options(java.parameters = "-Xmx4g")
+
+write.xlsx(eplsquad,"eplsquad.xlsx", sheetName = "data")
+write.xlsx(eplsquad2,"eplsquad2.xlsx" ,sheetName = "data2")
+
+write.xlsx(bundesligasquad,"bundesligasquad.xlsx", sheetName = "data")
+write.xlsx(bundesligasquad2,"bundesligasquad2.xlsx" ,sheetName = "data2")
+
+write.xlsx(serieasquad,"serieasquad.xlsx", sheetName = "data")
+write.xlsx(serieasquad2,"serieasquad2.xlsx" ,sheetName = "data2")
+
+write.xlsx(laligasquad,"laligasquad.xlsx", sheetName = "data")
+write.xlsx(laligasquad2,"laligasquad2.xlsx" ,sheetName = "data2")
+
+write.xlsx(ligueonesquad,"ligueonequad.xlsx", sheetName = "data")
+write.xlsx(ligueonesquad2,"ligueonesquad2.xlsx" ,sheetName = "data2")
+
+
+
 
 
 
