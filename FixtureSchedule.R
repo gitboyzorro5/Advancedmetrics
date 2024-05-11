@@ -85,7 +85,7 @@ all_schedule20232024 <- rbind(B1_schedule20232024,D2_schedule20232024,D1_schedul
 
 all_schedule20232024 <- all_schedule20232024[,c(7,5,6,3)]
 
-myfixtures <- all_schedule20232024[all_schedule20232024$Date >= '2024-05-03' & all_schedule20232024$Date <= '2024-05-06',]
+myfixtures <- all_schedule20232024[all_schedule20232024$Date >= '2024-05-10' & all_schedule20232024$Date <= '2024-05-13',]
 
 write.csv(myfixtures,'myfixtures.csv')
 
