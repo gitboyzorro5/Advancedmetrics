@@ -148,6 +148,62 @@ for(f1_sn in 1:17){
   write.xlsx(temp_players2,file.path(path,paste(final_doublefixture_f1[f1_sn,1],final_doublefixture_f1[f1_sn + 1,1],"squad.xlsx",sep = "_")),sheetName = "sheet",append = TRUE)
 
 }
+###############################################################################################################################################################################
+###############################################################################################################################################################################
+#B1
+unlink('Squads/B1/*')
+for(b1_sn in 1:15){
+  df <- b1squad2[b1squad2$Squad == final_doublefixture_b1[b1_sn,1],]
+
+  df2 <- b1squad2[b1squad2$Squad == final_doublefixture_b1[b1_sn + 1,1],]
+
+  temp_players <- rbind(df,df2)
+  temp_players <- temp_players[order(temp_players$YCrd, decreasing = T),]
+
+  path = "C:\\Users\\Kovan\\Advancedmetrics\\Squads\\B1"
+  write.xlsx(temp_players,file.path(path,paste(final_doublefixture_b1[b1_sn,1],final_doublefixture_b1[b1_sn + 1,1],"squad.xlsx",sep = "_")))
+
+}
+##############################################################################################################################################
+#D2
+unlink('Squads/D2/*')
+for(d2_sn in 1:17){
+  df <- d2squad2[d2squad2$Squad == final_doublefixture_d2[d2_sn,1],]
+
+  df2 <- d2squad2[d2squad2$Squad == final_doublefixture_d2[d2_sn + 1,1],]
+
+  temp_players <- rbind(df,df2)
+  temp_players <- temp_players[order(temp_players$YCrd, decreasing = T),]
+
+  path = "C:\\Users\\Kovan\\Advancedmetrics\\Squads\\D2"
+  write.xlsx(temp_players,file.path(path,paste(final_doublefixture_d2[d2_sn,1],final_doublefixture_d2[d2_sn + 1,1],"squad.xlsx",sep = "_")))
+
+}
+################################################################################################################################################
+#SC0
+unlink('Squads/SC0/*')
+for(sc0_sn in 1:11){
+  df <- sc0squad2[sc0squad2$Squad == final_doublefixture_sc0[sc0_sn,1],]
+
+  df2 <- sc0squad2[sc0squad2$Squad == final_doublefixture_sc0[sc0_sn + 1,1],]
+
+  temp_players <- rbind(df,df2)
+  temp_players <- temp_players[order(temp_players$YCrd, decreasing = T),]
+
+  path = "C:\\Users\\Kovan\\Advancedmetrics\\Squads\\SC0"
+  write.xlsx(temp_players,file.path(path,paste(final_doublefixture_sc0[sc0_sn,1],final_doublefixture_sc0[sc0_sn + 1,1],"squad.xlsx",sep = "_")))
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
