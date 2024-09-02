@@ -22,11 +22,13 @@ E2_schedule20242025 <- E2_schedule20242025[,c(-1)]
 E3_schedule20242025 <- read.csv('../Downloads/E3_schedule20242025.csv')
 E3_schedule20242025 <- E3_schedule20242025[,c(-1)]
 EC_schedule20242025 <- read.csv('../Downloads/EC_schedule20242025.csv')
+EC_schedule20242025 <- EC_schedule20242025[,c(-1)]
 F1_schedule20242025 <- read.csv('../Downloads/F1_schedule20242025.csv')
 F1_schedule20242025 <- F1_schedule20242025[,c(-1)]
 F2_schedule20242025 <- read.csv('../Downloads/F2_schedule20242025.csv')
 F2_schedule20242025 <- F2_schedule20242025[,c(-1)]
-#G1_schedule20242025 <- read.csv('../Downloads/G1_schedule20242025.csv')
+G1_schedule20242025 <- read.csv('../Downloads/G1_schedule20242025.csv')
+G1_schedule20242025 <- G1_schedule20242025[,c(-1)]
 #UCL_schedule20242025 <- read.csv('Downloads/UCL_schedule20242025.csv')
 I1_schedule20242025 <- read.csv('../Downloads/I1_schedule20242025.csv')
 I1_schedule20242025 <- I1_schedule20242025[,c(-1)]
@@ -43,7 +45,9 @@ SC0_schedule20242025 <- SC0_schedule20242025[,c(-1)]
 SC1_schedule20242025 <- read.csv('../Downloads/SC1_schedule20242025.csv')
 SC1_schedule20242025 <- SC1_schedule20242025[,c(-1)]
 SC2_schedule20242025 <- read.csv('../Downloads/SC2_schedule20242025.csv')
+SC2_schedule20242025 <- SC2_schedule20242025[,c(-1)]
 SC3_schedule20242025 <- read.csv('../Downloads/SC3_schedule20242025.csv')
+SC3_schedule20242025 <- SC3_schedule20242025[,c(-1)]
 SP2_schedule20242025 <- read.csv('../Downloads/SP2_schedule20242025.csv')
 SP2_schedule20242025 <- SP2_schedule20242025[,c(-1)]
 T1_schedule20242025 <- read.csv('../Downloads/T1_schedule20242025.csv')
@@ -68,10 +72,10 @@ N1_schedule20242025$Date <- ymd(N1_schedule20242025$Date)
 P1_schedule20242025$Date <- ymd(P1_schedule20242025$Date)
 SC0_schedule20242025$Date <- ymd(SC0_schedule20242025$Date)
 SC1_schedule20242025$Date <- ymd(SC1_schedule20242025$Date)
-SC2_schedule20242025$Date <- ymd(SC2_schedule20242025$Date)
-SC3_schedule20242025$Date <- ymd(SC3_schedule20242025$Date)
+SC2_schedule20242025$Date <- dmy(SC2_schedule20242025$Date)
+SC3_schedule20242025$Date <- dmy(SC3_schedule20242025$Date)
 SP1_schedule20242025$Date <- ymd(SP1_schedule20242025$Date)
-SP2_schedule20242025$Date <- ymd(SP2_schedule20242025$Date)
+SP2_schedule20242025$Date <- dmy(SP2_schedule20242025$Date)
 T1_schedule20242025$Date <- ymd(T1_schedule20242025$Date)
 #UEL_schedule20242025$Date_uel <- dmy(UEL_schedule20242025$Date_uel)
 #insert divisions
@@ -101,9 +105,10 @@ T1_schedule20242025$Date <- ymd(T1_schedule20242025$Date)
 
 #all_schedule20242025 <- rbind(B1_schedule20242025,D2_schedule20242025,D1_schedule20242025,E0_schedule20242025,E1_schedule20242025,E2_schedule20242025,E3_schedule20242025,EC_schedule20242025,F1_schedule20242025,F2_schedule20242025,G1_schedule20242025,I1_schedule20242025,I2_schedule20242025,N1_schedule20242025,P1_schedule20242025,SC0_schedule20242025,SC1_schedule20242025,SC2_schedule20242025,SC3_schedule20242025,SP1_schedule20242025,SP2_schedule20242025,T1_schedule20242025)
 
-all_schedule20242025 <- rbind(B1_schedule20242025,E0_schedule20242025,D1_schedule20242025,D2_schedule20242025,E1_schedule20242025,E2_schedule20242025,E3_schedule20242025,F1_schedule20242025,F2_schedule20242025,I1_schedule20242025,I2_schedule20242025,N1_schedule20242025,SP1_schedule20242025,SC0_schedule20242025,SC1_schedule20242025,SP2_schedule20242025,T1_schedule20242025,P1_schedule20242025)
+all_schedule20242025 <- rbind(B1_schedule20242025,E0_schedule20242025,D1_schedule20242025,D2_schedule20242025,E1_schedule20242025,E2_schedule20242025,E3_schedule20242025,EC_schedule20242025,F1_schedule20242025,F2_schedule20242025,G1_schedule20242025,I1_schedule20242025,I2_schedule20242025,N1_schedule20242025,SP1_schedule20242025,SC0_schedule20242025,SC1_schedule20242025,SC2_schedule20242025,SC3_schedule20242025,SP2_schedule20242025,T1_schedule20242025,P1_schedule20242025)
 
-myfixtures <- all_schedule20242025[all_schedule20242025$Date >= '2024-08-15' & all_schedule20242025$Date <= '2024-08-19',]
+myfixtures <- all_schedule20242025[all_schedule20242025$Date >= '2024-08-30' & all_schedule20242025$Date <= '2024-09-02',]
 
 write.csv(myfixtures,'myfixtures.csv')
 View(myfixtures)
+

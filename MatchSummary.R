@@ -167,7 +167,7 @@ Away_first_YCTime <- sqldf("SELECT epl_summary.matchid,MIN(epl_summary.Event_Tim
 EPL_spread <- dplyr::left_join(EPL_spread,Away_first_YCTime)
 EPL_spread <- EPL_spread %>% replace(is.na(.),0)
 
-EPL_spread$match_First_YCTime <- pmin(EPL_spread$Home_first_YCTime,EPL_spread$Away_first_YCTime)
+EPL_spread$match_First_YCTime <- ifelse(EPL_spread$Home_first_YCTime == '0' | EPL_spread$Away_first_YCTime == '0',pmax(EPL_spread$Home_first_YCTime,EPL_spread$Away_first_YCTime),pmin(EPL_spread$Home_first_YCTime,EPL_spread$Away_first_YCTime))
 
 #count number of penalties in a match
 Penalty <- c()
@@ -350,7 +350,7 @@ Away_first_YCTime <- sqldf("SELECT bundes_summary.matchid,MIN(bundes_summary.Eve
 BUNDES_spread <- dplyr::left_join(BUNDES_spread,Away_first_YCTime)
 BUNDES_spread <- BUNDES_spread %>% replace(is.na(.),0)
 
-BUNDES_spread$match_First_YCTime <- pmin(BUNDES_spread$Home_first_YCTime,BUNDES_spread$Away_first_YCTime)
+BUNDES_spread$match_First_YCTime <- ifelse(BUNDES_spread$Home_first_YCTime == '0' | BUNDES_spread$Away_first_YCTime == '0',pmax(BUNDES_spread$Home_first_YCTime,BUNDES_spread$Away_first_YCTime),pmin(BUNDES_spread$Home_first_YCTime,BUNDES_spread$Away_first_YCTime))
 
 #count number of penalties in a match
 Penalty <- c()
@@ -359,7 +359,7 @@ BUNDES_spread <- dplyr::left_join(BUNDES_spread,Penalty)
 BUNDES_spread <- BUNDES_spread %>% replace(is.na(.),0)
 #calculate match performance
 BUNDES_spread$MatchPerfomance <- BUNDES_spread$TG *15 + BUNDES_spread$TY *5 + BUNDES_spread$TR *15 + BUNDES_spread$TC *3 + BUNDES_spread$Penalty *10
-View(BUNDES_spread)
+
 
 unlink('BUNDES_SPREAD.xlsx')
 write.xlsx(BUNDES_spread,'BUNDES_SPREAD.xlsx')
@@ -413,6 +413,7 @@ SERIEA_spread$matchid <- paste(SERIEA_spread$HomeTeam,SERIEA_spread$AwayTeam,sep
 
 I1_referees <- fb_match_results(country = "ITA", gender = "M", season_end_year = 2024, tier="1st")
 I1_referees <- I1_referees[,c(10,13,18)]
+
 #rename column names
 names(I1_referees)[1] <- paste("HomeTeam")
 names(I1_referees)[2] <- paste("AwayTeam")
@@ -529,7 +530,7 @@ Away_first_YCTime <- sqldf("SELECT seriea_summary.matchid,MIN(seriea_summary.Eve
 SERIEA_spread <- dplyr::left_join(SERIEA_spread,Away_first_YCTime)
 SERIEA_spread <- SERIEA_spread %>% replace(is.na(.),0)
 
-SERIEA_spread$match_First_YCTime <- pmin(SERIEA_spread$Home_first_YCTime,SERIEA_spread$Away_first_YCTime)
+SERIEA_spread$match_First_YCTime <- ifelse(SERIEA_spread$Home_first_YCTime == '0' | SERIEA_spread$Away_first_YCTime == '0',pmax(SERIEA_spread$Home_first_YCTime,SERIEA_spread$Away_first_YCTime),pmin(SERIEA_spread$Home_first_YCTime,SERIEA_spread$Away_first_YCTime))
 
 #count number of penalties in a match
 Penalty <- c()
@@ -561,8 +562,8 @@ laliga_match_urls_nrows <- length(fb_match_urls(country = "ESP", gender = "M", s
 new_laliga_match_urls <- tail(fb_match_urls(country = "ESP", gender = "M", season_end_year = 2024, tier="1st"),laliga_match_urls_nrows - current_laliga_match_urls_nrows)
 
 new_laliga_summary <- fb_match_summary(match_url = new_laliga_match_urls)
-sort(unique(laliga_summary$Home_Team))
-sp1_teams
+
+
 new_laliga_summary$Home_Team <- mgsub(new_laliga_summary$Home_Team,c("Alavés","Almería","Athletic Club","Atlético Madrid","Cádiz","Celta Vigo","Real Betis","Real Sociedad","Rayo Vallecano"),c("Alaves","Almeria","Ath Bilbao","Ath Madrid","Cadiz","Celta","Betis","Sociedad","Vallecano"))
 new_laliga_summary$Away_Team <- mgsub(new_laliga_summary$Away_Team,c("Alavés","Almería","Athletic Club","Atlético Madrid","Cádiz","Celta Vigo","Real Betis","Real Sociedad","Rayo Vallecano"),c("Alaves","Almeria","Ath Bilbao","Ath Madrid","Cadiz","Celta","Betis","Sociedad","Vallecano"))
 new_laliga_summary$Team <- mgsub(new_laliga_summary$Team,c("Alavés","Almería","Athletic Club","Atlético Madrid","Cádiz","Celta Vigo","Real Betis","Real Sociedad","Rayo Vallecano"),c("Alaves","Almeria","Ath Bilbao","Ath Madrid","Cadiz","Celta","Betis","Sociedad","Vallecano"))
@@ -594,6 +595,7 @@ LALIGA_spread$matchid <- paste(LALIGA_spread$HomeTeam,LALIGA_spread$AwayTeam,sep
 
 SP1_referees <- fb_match_results(country = "ESP", gender = "M", season_end_year = 2024, tier="1st")
 SP1_referees <- SP1_referees[,c(10,13,18)]
+
 #rename column names
 names(SP1_referees)[1] <- paste("HomeTeam")
 names(SP1_referees)[2] <- paste("AwayTeam")
@@ -709,7 +711,7 @@ Away_first_YCTime <- sqldf("SELECT laliga_summary.matchid,MIN(laliga_summary.Eve
 LALIGA_spread <- dplyr::left_join(LALIGA_spread,Away_first_YCTime)
 LALIGA_spread <- LALIGA_spread %>% replace(is.na(.),0)
 
-LALIGA_spread$match_First_YCTime <- pmin(LALIGA_spread$Home_first_YCTime,LALIGA_spread$Away_first_YCTime)
+LALIGA_spread$match_First_YCTime <- ifelse(LALIGA_spread$Home_first_YCTime == '0' | LALIGA_spread$Away_first_YCTime == '0',pmax(LALIGA_spread$Home_first_YCTime,LALIGA_spread$Away_first_YCTime),pmin(LALIGA_spread$Home_first_YCTime,LALIGA_spread$Away_first_YCTime))
 #count number of penalties in a match
 Penalty <- c()
 Penalty <- sqldf("SELECT laliga_summary.matchid,COUNT(*) AS Penalty FROM laliga_summary WHERE laliga_summary.Event_Type = 'Penalty' GROUP BY laliga_summary.matchid ")
@@ -773,6 +775,7 @@ LIGUEONE_spread$matchid <- paste(LIGUEONE_spread$HomeTeam,LIGUEONE_spread$AwayTe
 
 F1_referees <- fb_match_results(country = "FRA", gender = "M", season_end_year = 2024, tier="1st")
 F1_referees <- F1_referees[,c(10,13,18)]
+
 #rename column names
 names(F1_referees)[1] <- paste("HomeTeam")
 names(F1_referees)[2] <- paste("AwayTeam")
@@ -889,7 +892,7 @@ Away_first_YCTime <- sqldf("SELECT ligueone_summary.matchid,MIN(ligueone_summary
 LIGUEONE_spread <- dplyr::left_join(LIGUEONE_spread,Away_first_YCTime)
 LIGUEONE_spread <- LIGUEONE_spread %>% replace(is.na(.),0)
 
-LIGUEONE_spread$match_First_YCTime <- pmin(LIGUEONE_spread$Home_first_YCTime,LIGUEONE_spread$Away_first_YCTime)
+LIGUEONE_spread$match_First_YCTime <- ifelse(LIGUEONE_spread$Home_first_YCTime == '0' | LIGUEONE_spread$Away_first_YCTime == '0',pmax(LIGUEONE_spread$Home_first_YCTime,LIGUEONE_spread$Away_first_YCTime),pmin(LIGUEONE_spread$Home_first_YCTime,LIGUEONE_spread$Away_first_YCTime))
 
 #count number of penalties in a match
 Penalty <- c()
@@ -936,6 +939,7 @@ SERIEA_FINALSPREAD <- dplyr::left_join(I1_spreaducl,SERIEA_spread)
 SERIEA_FINALSPREAD <- SERIEA_FINALSPREAD %>% dplyr::relocate(51,.after = 37)
 unlink('SERIEA_FINALSPREAD')
 write.xlsx(SERIEA_FINALSPREAD,'SERIEA_FINALSPREAD.xlsx')
+
 #####################################################################################################################################
 SP1_spreaducl <- readxl::read_excel('../Rsoccer/SP1_spread.xlsx')
 SP1_spreaducl <- SP1_spreaducl[,c(-1)]

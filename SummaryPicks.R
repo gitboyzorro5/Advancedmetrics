@@ -21,7 +21,7 @@ for(e0_sn in 1:19){
   temp_analysis <- rbind(temp_analysis,temp_analyis_combined)
 
   path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\E0"
-  write.csv(temp_analysis,file.path(path,paste(final_doublefixture_e0[e0_sn,1],final_doublefixture_e0[e0_sn + 1,1],"adv.csv",sep = "_")))
+  write.xlsx(temp_analysis,file.path(path,paste(final_doublefixture_e0[e0_sn,1],final_doublefixture_e0[e0_sn + 1,1],"adv.xlsx",sep = "_")))
 
 }
 #
@@ -46,7 +46,7 @@ for(d1_sn in 1:17){
   temp_analysis <- rbind(temp_analysis,temp_analyis_combined)
 
   path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\D1"
-  write.csv(temp_analysis,file.path(path,paste(final_doublefixture_d1[d1_sn,1],final_doublefixture_d1[d1_sn + 1,1],"adv.csv",sep = "_")))
+  write.xlsx(temp_analysis,file.path(path,paste(final_doublefixture_d1[d1_sn,1],final_doublefixture_d1[d1_sn + 1,1],"adv.xlsx",sep = "_")))
 
 }
 ##
@@ -71,18 +71,22 @@ for(i1_sn in 1:19){
   temp_analysis <- rbind(temp_analysis,temp_analyis_combined)
 
   path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\I1"
-  write.csv(temp_analysis,file.path(path,paste(final_doublefixture_i1[i1_sn,1],final_doublefixture_i1[i1_sn + 1,1],"adv.csv",sep = "_")))
+  write.xlsx(temp_analysis,file.path(path,paste(final_doublefixture_i1[i1_sn,1],final_doublefixture_i1[i1_sn + 1,1],"adv.xlsx",sep = "_")))
 
 }
 #
 #SP1
 #SP1
+View(df)
+final_doublefixture_i1
+final_doublefixture_f1[f1_sn,1]
+final_doublefixture_sp1[sp1_sn,1]
 advstatsn <- 6
 SP1_advstats <- readxl::read_excel('LALIGA_FINALSPREAD.xlsx')
 SP1_advstats <- SP1_advstats[,-1]
 unlink('Summaries/SP1/*')
 for(sp1_sn in 1:19){
-  df <- tail(SP1_advstats[SP1_advstats$HomeTeam == final_doublefixture_sp1[sp1_sn,1] | SP1_advstats$AwayTeam == final_doublefixture_sp1[sp1_sn,1] ,],advstatsn)
+  df <- tail(SP1_advstats[SP1_advstats$HomeTeam == final_doublefixture_sp1[sp1_sn,1]| SP1_advstats$AwayTeam == final_doublefixture_sp1[sp1_sn,1],],advstatsn)
 
   df2 <- tail(SP1_advstats[SP1_advstats$HomeTeam == final_doublefixture_sp1[sp1_sn + 1,1] | SP1_advstats$AwayTeam == final_doublefixture_sp1[sp1_sn + 1,1],],advstatsn)
 
@@ -97,7 +101,7 @@ for(sp1_sn in 1:19){
   temp_analysis <- rbind(temp_analysis,temp_analyis_combined)
 
   path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\SP1"
-  write.csv(temp_analysis,file.path(path,paste(final_doublefixture_sp1[sp1_sn,1],final_doublefixture_sp1[sp1_sn + 1,1],"adv.csv",sep = "_")))
+  write.xlsx(temp_analysis,file.path(path,paste(final_doublefixture_sp1[sp1_sn,1],final_doublefixture_sp1[sp1_sn + 1,1],"adv.xlsx",sep = "_")))
 
 }
 #
@@ -108,7 +112,7 @@ F1_advstats <- readxl::read_excel('LIGUEONE_FINALSPREAD.xlsx')
 F1_advstats <- F1_advstats[,-1]
 unlink('Summaries/F1/*')
 for(f1_sn in 1:19){
-  df <- tail(F1_advstats[F1_advstats$HomeTeam == final_doublefixture_f1[f1_sn,1] | F1_advstats$AwayTeam == final_doublefixture_f1[f1_sn,1] ,],advstatsn)
+  df <- tail(F1_advstats[F1_advstats$HomeTeam == final_doublefixture_f1[f1_sn,1] | F1_advstats$AwayTeam == final_doublefixture_f1[f1_sn,1],],advstatsn)
 
   df2 <- tail(F1_advstats[F1_advstats$HomeTeam == final_doublefixture_f1[f1_sn + 1,1] | F1_advstats$AwayTeam == final_doublefixture_f1[f1_sn + 1,1],],advstatsn)
 
@@ -123,7 +127,7 @@ for(f1_sn in 1:19){
   temp_analysis <- rbind(temp_analysis,temp_analyis_combined)
 
   path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\F1"
-  write.csv(temp_analysis,file.path(path,paste(final_doublefixture_f1[f1_sn,1],final_doublefixture_f1[f1_sn + 1,1],"adv.csv",sep = "_")))
+  write.xlsx(temp_analysis,file.path(path,paste(final_doublefixture_f1[f1_sn,1],final_doublefixture_f1[f1_sn + 1,1],"adv.xlsx",sep = "_")))
 
 }
 

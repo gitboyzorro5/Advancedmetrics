@@ -10,8 +10,8 @@ for(e0_sn in 1:19){
   temp_players <- rbind(df,df2)
   temp_players <- temp_players[order(temp_players$YCrd, decreasing = T),]
 
-  path = "C:\\Users\\Kovan\\Advancedmetrics\\Squads\\E0"
-  write.xlsx(temp_players,file.path(path,paste(final_doublefixture_e0[e0_sn,1],final_doublefixture_e0[e0_sn + 1,1],"squad.xlsx",sep = "_")))
+  path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\E0"
+  write.xlsx(temp_players,file.path(path,paste(final_doublefixture_e0[e0_sn,1],final_doublefixture_e0[e0_sn + 1,1],"adv.xlsx",sep = "_")),sheetName = "squads",append = TRUE)
 
 }
 
@@ -25,8 +25,8 @@ for(d1_sn in 1:17){
   temp_players <- rbind(df,df2)
   temp_players <- temp_players[order(temp_players$YCrd, decreasing = T),]
 
-  path = "C:\\Users\\Kovan\\Advancedmetrics\\Squads\\D1"
-  write.xlsx(temp_players,file.path(path,paste(final_doublefixture_d1[d1_sn,1],final_doublefixture_d1[d1_sn + 1,1],"squad.xlsx",sep = "_")))
+  path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\D1"
+  write.xlsx(temp_players,file.path(path,paste(final_doublefixture_d1[d1_sn,1],final_doublefixture_d1[d1_sn + 1,1],"adv.xlsx",sep = "_")),sheetName = "squads",append = TRUE)
 
 }
 
@@ -40,8 +40,8 @@ for(i1_sn in 1:19){
   temp_players <- rbind(df,df2)
   temp_players <- temp_players[order(temp_players$YCrd, decreasing = T),]
 
-  path = "C:\\Users\\Kovan\\Advancedmetrics\\Squads\\I1"
-  write.xlsx(temp_players,file.path(path,paste(final_doublefixture_i1[i1_sn,1],final_doublefixture_i1[i1_sn + 1,1],"squad.xlsx",sep = "_")))
+  path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\I1"
+  write.xlsx(temp_players,file.path(path,paste(final_doublefixture_i1[i1_sn,1],final_doublefixture_i1[i1_sn + 1,1],"adv.xlsx",sep = "_")),sheetName = "squads",append = TRUE)
 
 }
 
@@ -56,8 +56,8 @@ for(sp1_sn in 1:19){
   temp_players <- rbind(df,df2)
   temp_players <- temp_players[order(temp_players$YCrd, decreasing = T),]
 
-  path = "C:\\Users\\Kovan\\Advancedmetrics\\Squads\\SP1"
-  write.xlsx(temp_players,file.path(path,paste(final_doublefixture_sp1[sp1_sn,1],final_doublefixture_sp1[sp1_sn + 1,1],"squad.xlsx",sep = "_")))
+  path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\SP1"
+  write.xlsx(temp_players,file.path(path,paste(final_doublefixture_sp1[sp1_sn,1],final_doublefixture_sp1[sp1_sn + 1,1],"adv.xlsx",sep = "_")),sheetName = "squads",append = TRUE)
 
 }
 
@@ -71,8 +71,8 @@ for(f1_sn in 1:17){
   temp_players <- rbind(df,df2)
   temp_players <- temp_players[order(temp_players$YCrd, decreasing = T),]
 
-  path = "C:\\Users\\Kovan\\Advancedmetrics\\Squads\\F1"
-  write.xlsx(temp_players,file.path(path,paste(final_doublefixture_f1[f1_sn,1],final_doublefixture_f1[f1_sn + 1,1],"squad.xlsx",sep = "_")))
+  path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\F1"
+  write.xlsx(temp_players,file.path(path,paste(final_doublefixture_f1[f1_sn,1],final_doublefixture_f1[f1_sn + 1,1],"adv.xlsx",sep = "_")),sheetName = "squads",append = TRUE)
 
 }
 ########################################################################################
@@ -87,8 +87,8 @@ for(e0_sn in 1:19){
   temp_players2 <- rbind(ef,ef2)
   temp_players2 <- temp_players2[order(temp_players2$Gls, decreasing = T),]
 
-  path = "C:\\Users\\Kovan\\Advancedmetrics\\Squads\\E0"
-  write.xlsx(temp_players2,file.path(path,paste(final_doublefixture_e0[e0_sn,1],final_doublefixture_e0[e0_sn + 1,1],"squad.xlsx",sep = "_")),sheetName = "sheet",append = TRUE)
+  path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\E0"
+  write.xlsx(temp_players2,file.path(path,paste(final_doublefixture_e0[e0_sn,1],final_doublefixture_e0[e0_sn + 1,1],"adv.xlsx",sep = "_")),sheetName = "squad2",append = TRUE)
 
 }
 ########################################
@@ -101,8 +101,8 @@ for(d1_sn in 1:17){
   temp_players2 <- rbind(ef,ef2)
   temp_players2 <- temp_players2[order(temp_players2$Gls, decreasing = T),]
 
-  path = "C:\\Users\\Kovan\\Advancedmetrics\\Squads\\D1"
-  write.xlsx(temp_players2,file.path(path,paste(final_doublefixture_d1[d1_sn,1],final_doublefixture_d1[d1_sn + 1,1],"squad.xlsx",sep = "_")),sheetName = "sheet",append = TRUE)
+  path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\D1"
+  write.xlsx(temp_players2,file.path(path,paste(final_doublefixture_d1[d1_sn,1],final_doublefixture_d1[d1_sn + 1,1],"adv.xlsx",sep = "_")),sheetName = "squads2",append = TRUE)
 
 }
 ########################################
@@ -115,8 +115,8 @@ for(i1_sn in 1:19){
   temp_players2 <- rbind(ef,ef2)
   temp_players2 <- temp_players2[order(temp_players2$Gls, decreasing = T),]
 
-  path = "C:\\Users\\Kovan\\Advancedmetrics\\Squads\\I1"
-  write.xlsx(temp_players2,file.path(path,paste(final_doublefixture_i1[i1_sn,1],final_doublefixture_i1[i1_sn + 1,1],"squad.xlsx",sep = "_")),sheetName = "sheet",append = TRUE)
+  path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\I1"
+  write.xlsx(temp_players2,file.path(path,paste(final_doublefixture_i1[i1_sn,1],final_doublefixture_i1[i1_sn + 1,1],"adv.xlsx",sep = "_")),sheetName = "squads2",append = TRUE)
 
 }
 #######################################
@@ -129,8 +129,8 @@ for(sp1_sn in 1:19){
   temp_players2 <- rbind(ef,ef2)
   temp_players2 <- temp_players2[order(temp_players2$Gls, decreasing = T),]
 
-  path = "C:\\Users\\Kovan\\Advancedmetrics\\Squads\\SP1"
-  write.xlsx(temp_players2,file.path(path,paste(final_doublefixture_sp1[sp1_sn,1],final_doublefixture_sp1[sp1_sn + 1,1],"squad.xlsx",sep = "_")),sheetName = "sheet",append = TRUE)
+  path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\SP1"
+  write.xlsx(temp_players2,file.path(path,paste(final_doublefixture_sp1[sp1_sn,1],final_doublefixture_sp1[sp1_sn + 1,1],"adv.xlsx",sep = "_")),sheetName = "squads2",append = TRUE)
 
 }
 
@@ -144,8 +144,8 @@ for(f1_sn in 1:17){
   temp_players2 <- rbind(ef,ef2)
   temp_players2 <- temp_players2[order(temp_players2$Gls, decreasing = T),]
 
-  path = "C:\\Users\\Kovan\\Advancedmetrics\\Squads\\F1"
-  write.xlsx(temp_players2,file.path(path,paste(final_doublefixture_f1[f1_sn,1],final_doublefixture_f1[f1_sn + 1,1],"squad.xlsx",sep = "_")),sheetName = "sheet",append = TRUE)
+  path = "C:\\Users\\Kovan\\Advancedmetrics\\Summaries\\F1"
+  write.xlsx(temp_players2,file.path(path,paste(final_doublefixture_f1[f1_sn,1],final_doublefixture_f1[f1_sn + 1,1],"adv.xlsx",sep = "_")),sheetName = "squads2",append = TRUE)
 
 }
 ###############################################################################################################################################################################
@@ -209,22 +209,22 @@ for(sc0_sn in 1:11){
 
 unique(sort(playerdata$Squad))
 ###############individual team name#######################################
-library(xlsx)
-df <- playerdata[playerdata$Squad == "Manchester City",]
-df2 <- playerdata[playerdata$Squad == "Brighton",]
-
-ef <- playerdata2[playerdata2$Squad == "Manchester City",]
-ef2 <- playerdata2[playerdata2$Squad == "Brighton",]
-
-temp_players <- rbind(df,df2)
-temp_players <- temp_players[order(temp_players$YCrd, decreasing = T),]
-
-etemp_players <- rbind(ef,ef2)
-etemp_players <- etemp_players[order(etemp_players$Gls, decreasing = T),]
-
-
-write.xlsx(temp_players,'Temp/brightoncity.xlsx')
-write.xlsx(etemp_players,'Temp/brightoncity.xlsx',sheetName = "sheet2",append = TRUE)
+# library(xlsx)
+# df <- playerdata[playerdata$Squad == "Manchester City",]
+# df2 <- playerdata[playerdata$Squad == "Brighton",]
+#
+# ef <- playerdata2[playerdata2$Squad == "Manchester City",]
+# ef2 <- playerdata2[playerdata2$Squad == "Brighton",]
+#
+# temp_players <- rbind(df,df2)
+# temp_players <- temp_players[order(temp_players$YCrd, decreasing = T),]
+#
+# etemp_players <- rbind(ef,ef2)
+# etemp_players <- etemp_players[order(etemp_players$Gls, decreasing = T),]
+#
+#
+# write.xlsx(temp_players,'Temp/brightoncity.xlsx')
+# write.xlsx(etemp_players,'Temp/brightoncity.xlsx',sheetName = "sheet2",append = TRUE)
 
 
 

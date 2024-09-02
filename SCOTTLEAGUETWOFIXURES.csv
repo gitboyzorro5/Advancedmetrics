@@ -1,0 +1,181 @@
+,Div,HomeTeam,AwayTeam,Date
+1,SC3,Bonnyrigg Rose,Clyde,24/08/2024
+2,SC3,Bonnyrigg Rose,East Fife,28/12/2024
+3,SC3,Bonnyrigg Rose,Edinburgh City,19/10/2024
+4,SC3,Bonnyrigg Rose,Elgin,09/11/2024
+5,SC3,Bonnyrigg Rose,Forfar,28/09/2024
+6,SC3,Bonnyrigg Rose,Peterhead,03/08/2024
+7,SC3,Bonnyrigg Rose,Spartans,07/12/2024
+8,SC3,Bonnyrigg Rose,Stirling,23/11/2024
+9,SC3,Bonnyrigg Rose,Stranraer,31/08/2024
+10,SC3,Clyde,Bonnyrigg Rose,02/11/2024
+11,SC3,Clyde,East Fife,16/11/2024
+12,SC3,Clyde,Edinburgh City,14/09/2024
+13,SC3,Clyde,Elgin,21/09/2024
+14,SC3,Clyde,Forfar,21/12/2024
+15,SC3,Clyde,Peterhead,03/05/2025
+16,SC3,Clyde,Spartans,05/10/2024
+17,SC3,Clyde,Stirling,17/08/2024
+18,SC3,Clyde,Stranraer,10/08/2024
+19,SC3,East Fife,Bonnyrigg Rose,05/10/2024
+20,SC3,East Fife,Clyde,31/08/2024
+21,SC3,East Fife,Edinburgh City,10/08/2024
+22,SC3,East Fife,Elgin,07/12/2024
+23,SC3,East Fife,Forfar,17/08/2024
+24,SC3,East Fife,Peterhead,21/09/2024
+25,SC3,East Fife,Spartans,21/12/2024
+26,SC3,East Fife,Stirling,02/11/2024
+27,SC3,East Fife,Stranraer,09/11/2024
+28,SC3,Edinburgh City,Bonnyrigg Rose,17/08/2024
+29,SC3,Edinburgh City,Clyde,09/11/2024
+30,SC3,Edinburgh City,East Fife,23/11/2024
+31,SC3,Edinburgh City,Elgin,21/12/2024
+32,SC3,Edinburgh City,Forfar,02/11/2024
+33,SC3,Edinburgh City,Peterhead,31/08/2024
+34,SC3,Edinburgh City,Spartans,21/09/2024
+35,SC3,Edinburgh City,Stirling,03/08/2024
+36,SC3,Edinburgh City,Stranraer,05/10/2024
+37,SC3,Elgin,Bonnyrigg Rose,14/09/2024
+38,SC3,Elgin,Clyde,23/11/2024
+39,SC3,Elgin,East Fife,03/08/2024
+40,SC3,Elgin,Edinburgh City,28/09/2024
+41,SC3,Elgin,Forfar,16/11/2024
+42,SC3,Elgin,Peterhead,28/12/2024
+43,SC3,Elgin,Spartans,17/09/2024
+44,SC3,Elgin,Stirling,14/12/2024
+45,SC3,Elgin,Stranraer,02/11/2024
+46,SC3,Forfar,Bonnyrigg Rose,14/12/2024
+47,SC3,Forfar,Clyde,03/08/2024
+48,SC3,Forfar,East Fife,19/10/2024
+49,SC3,Forfar,Edinburgh City,24/08/2024
+50,SC3,Forfar,Elgin,31/08/2024
+51,SC3,Forfar,Peterhead,23/11/2024
+52,SC3,Forfar,Spartans,09/11/2024
+53,SC3,Forfar,Stirling,28/12/2024
+54,SC3,Forfar,Stranraer,21/09/2024
+55,SC3,Peterhead,Bonnyrigg Rose,21/12/2024
+56,SC3,Peterhead,Clyde,28/09/2024
+57,SC3,Peterhead,East Fife,14/12/2024
+58,SC3,Peterhead,Edinburgh City,16/11/2024
+59,SC3,Peterhead,Elgin,05/10/2024
+60,SC3,Peterhead,Forfar,10/08/2024
+61,SC3,Peterhead,Spartans,02/11/2024
+62,SC3,Peterhead,Stirling,14/09/2024
+63,SC3,Peterhead,Stranraer,17/08/2024
+64,SC3,Spartans,Bonnyrigg Rose,10/08/2024
+65,SC3,Spartans,Clyde,14/12/2024
+66,SC3,Spartans,East Fife,28/09/2024
+67,SC3,Spartans,Edinburgh City,28/12/2024
+68,SC3,Spartans,Elgin,19/10/2024
+69,SC3,Spartans,Forfar,14/09/2024
+70,SC3,Spartans,Peterhead,24/08/2024
+71,SC3,Spartans,Stirling,16/11/2024
+72,SC3,Spartans,Stranraer,23/11/2024
+73,SC3,Stirling,Bonnyrigg Rose,21/09/2024
+74,SC3,Stirling,Clyde,19/10/2024
+75,SC3,Stirling,East Fife,24/08/2024
+76,SC3,Stirling,Edinburgh City,07/12/2024
+77,SC3,Stirling,Elgin,10/08/2024
+78,SC3,Stirling,Forfar,05/10/2024
+79,SC3,Stirling,Peterhead,09/11/2024
+80,SC3,Stirling,Spartans,31/08/2024
+81,SC3,Stirling,Stranraer,21/12/2024
+82,SC3,Stranraer,Bonnyrigg Rose,16/11/2024
+83,SC3,Stranraer,Clyde,28/12/2024
+84,SC3,Stranraer,East Fife,14/09/2024
+85,SC3,Stranraer,Edinburgh City,14/12/2024
+86,SC3,Stranraer,Elgin,24/08/2024
+87,SC3,Stranraer,Forfar,07/12/2024
+88,SC3,Stranraer,Peterhead,19/10/2024
+89,SC3,Stranraer,Spartans,03/08/2024
+90,SC3,Stranraer,Stirling,28/09/2024
+91,SC3,Bonnyrigg Rose,Clyde,01/02/2025
+92,SC3,Bonnyrigg Rose,East Fife,12/04/2025
+93,SC3,Bonnyrigg Rose,Edinburgh City,08/03/2025
+94,SC3,Bonnyrigg Rose,Elgin,29/03/2025
+95,SC3,Bonnyrigg Rose,Forfar,22/02/2025
+96,SC3,Bonnyrigg Rose,Peterhead,08/02/2025
+97,SC3,Bonnyrigg Rose,Spartans,26/04/2025
+98,SC3,Bonnyrigg Rose,Stirling,15/03/2025
+99,SC3,Bonnyrigg Rose,Stranraer,11/01/2025
+100,SC3,Clyde,Bonnyrigg Rose,22/03/2025
+101,SC3,Clyde,East Fife,08/03/2025
+102,SC3,Clyde,Edinburgh City,18/01/2025
+103,SC3,Clyde,Elgin,25/01/2025
+104,SC3,Clyde,Forfar,12/04/2025
+105,SC3,Clyde,Peterhead,
+106,SC3,Clyde,Spartans,22/02/2025
+107,SC3,Clyde,Stirling,04/01/2025
+108,SC3,Clyde,Stranraer,08/02/2025
+109,SC3,East Fife,Bonnyrigg Rose,15/02/2025
+110,SC3,East Fife,Clyde,11/01/2025
+111,SC3,East Fife,Edinburgh City,25/01/2025
+112,SC3,East Fife,Elgin,03/05/2025
+113,SC3,East Fife,Forfar,04/01/2025
+114,SC3,East Fife,Peterhead,22/02/2025
+115,SC3,East Fife,Spartans,29/03/2025
+116,SC3,East Fife,Stirling,19/04/2025
+117,SC3,East Fife,Stranraer,15/03/2025
+118,SC3,Edinburgh City,Bonnyrigg Rose,04/01/2025
+119,SC3,Edinburgh City,Clyde,05/04/2025
+120,SC3,Edinburgh City,East Fife,22/03/2025
+121,SC3,Edinburgh City,Elgin,12/04/2025
+122,SC3,Edinburgh City,Forfar,26/04/2025
+123,SC3,Edinburgh City,Peterhead,11/01/2025
+124,SC3,Edinburgh City,Spartans,15/02/2025
+125,SC3,Edinburgh City,Stirling,01/02/2025
+126,SC3,Edinburgh City,Stranraer,01/03/2025
+127,SC3,Elgin,Bonnyrigg Rose,18/01/2025
+128,SC3,Elgin,Clyde,15/03/2025
+129,SC3,Elgin,East Fife,01/02/2025
+130,SC3,Elgin,Edinburgh City,22/02/2025
+131,SC3,Elgin,Forfar,08/03/2025
+132,SC3,Elgin,Peterhead,19/04/2025
+133,SC3,Elgin,Spartans,04/01/2025
+134,SC3,Elgin,Stirling,05/04/2025
+135,SC3,Elgin,Stranraer,26/04/2025
+136,SC3,Forfar,Bonnyrigg Rose,19/04/2025
+137,SC3,Forfar,Clyde,01/03/2025
+138,SC3,Forfar,East Fife,05/04/2025
+139,SC3,Forfar,Edinburgh City,08/02/2025
+140,SC3,Forfar,Elgin,11/01/2025
+141,SC3,Forfar,Peterhead,29/03/2025
+142,SC3,Forfar,Spartans,15/03/2025
+143,SC3,Forfar,Stirling,03/05/2025
+144,SC3,Forfar,Stranraer,25/01/2025
+145,SC3,Peterhead,Bonnyrigg Rose,05/04/2025
+146,SC3,Peterhead,Clyde,15/02/2025
+147,SC3,Peterhead,East Fife,26/04/2025
+148,SC3,Peterhead,Edinburgh City,15/03/2025
+149,SC3,Peterhead,Elgin,01/03/2025
+150,SC3,Peterhead,Forfar,01/02/2025
+151,SC3,Peterhead,Spartans,12/04/2025
+152,SC3,Peterhead,Stirling,18/01/2025
+153,SC3,Peterhead,Stranraer,04/01/2025
+154,SC3,Spartans,Bonnyrigg Rose,01/03/2025
+155,SC3,Spartans,Clyde,19/04/2025
+156,SC3,Spartans,East Fife,08/02/2025
+157,SC3,Spartans,Edinburgh City,03/05/2025
+158,SC3,Spartans,Elgin,22/03/2025
+159,SC3,Spartans,Forfar,18/01/2025
+160,SC3,Spartans,Peterhead,25/01/2025
+161,SC3,Spartans,Stirling,08/03/2025
+162,SC3,Spartans,Stranraer,05/04/2025
+163,SC3,Stirling,Bonnyrigg Rose,25/01/2025
+164,SC3,Stirling,Clyde,26/04/2025
+165,SC3,Stirling,East Fife,01/03/2025
+166,SC3,Stirling,Edinburgh City,29/03/2025
+167,SC3,Stirling,Elgin,08/02/2025
+168,SC3,Stirling,Forfar,15/02/2025
+169,SC3,Stirling,Peterhead,22/03/2025
+170,SC3,Stirling,Spartans,11/01/2025
+171,SC3,Stirling,Stranraer,12/04/2025
+172,SC3,Stranraer,Bonnyrigg Rose,03/05/2025
+173,SC3,Stranraer,Clyde,29/03/2025
+174,SC3,Stranraer,East Fife,18/01/2025
+175,SC3,Stranraer,Edinburgh City,19/04/2025
+176,SC3,Stranraer,Elgin,15/02/2025
+177,SC3,Stranraer,Forfar,22/03/2025
+178,SC3,Stranraer,Peterhead,08/03/2025
+179,SC3,Stranraer,Spartans,01/02/2025
+180,SC3,Stranraer,Stirling,22/02/2025

@@ -51,4 +51,23 @@ mls_match_fouls <- fb_advanced_match_stats(match_url = mls_urls,
                                            stat_type = "misc" , team_or_player = "team")
 
 write.xlsx(mls_match_fouls,"mls_fouls.xlsx")
+###################################################################################################
+allteams2010presentcsv <- read.csv('../FDAS/allteams2010-present.csv')
+View(allteams2010presentcsv)
+allteams2010presentcsv <- allteams2010presentcsv[,c(-14,-15)]
+allteams2010presentcsv$HTCS <- paste(allteams2010presentcsv$HTHG,allteams2010presentcsv$HTAG,sep = "-")
+allteams2010presentcsv$CS <- paste(allteams2010presentcsv$FTHG,allteams2010presentcsv$FTAG,sep = "-")
+write.csv(allteams2010presentcsv,'allteams2010-present.csv',row.names = FALSE)
+#####################################################################################################
 
+#SC2 and SC3 fixtures
+HomeTeam_sc3 <- rep(sc3_teams, each = length(sc3_teams))
+AwayTeam_sc3 <- rep(sc3_teams, length(sc3_teams))
+SC3_fixtures <- cbind(HomeTeam_sc3,AwayTeam_sc3)
+SC3_fixtures <- as.data.frame(SC3_fixtures)
+SC3_fixtures <- SC3_fixtures[!SC3_fixtures$HomeTeam_sc3 == SC3_fixtures$AwayTeam_sc3,]
+rownames(SC3_fixtures) <- NULL
+SC3_fixtures$Div <- "SC3"
+SC3_fixtures <- SC3_fixtures[,c(3,1,2)]
+colnames(SC3_fixtures)[3] <- "AwayTeam"
+write.csv(SC3_fixtures,'SCOTTLEAGUETWOFIXURES.csv')

@@ -126,21 +126,22 @@ laligasquad2 <- playerdata2[playerdata2$Comp == "es La Liga",]
 
 ligueonesquad <- playerdata[playerdata$Comp == "fr Ligue 1",]
 ligueonesquad2 <- playerdata2[playerdata2$Comp == "fr Ligue 1",]
+sort(unique(ligueonesquad2$Squad))
+f1_teams
+eplsquad$Squad <- mgsub(eplsquad$Squad,c("Leicester City","Manchester City","Manchester Utd","Newcastle Utd","Nott'ham Forest","Ipswich Town"),c("Leicester","Man City","Man United","Newcastle","Nottm Forest","Ipswich"))
+eplsquad2$Squad <- mgsub(eplsquad2$Squad,c("Leicester City","Manchester City","Manchester Utd","Newcastle Utd","Nott'ham Forest","Ipswich Town"),c("Leicester","Man City","Man United","Newcastle","Nottm Forest","Ipswich"))
 
-eplsquad$Squad <- mgsub(eplsquad$Squad,c("Luton Town","Manchester City","Manchester Utd","Newcastle Utd","Nott'ham Forest","Sheffield Utd"),c("Luton","Man City","Man United","Newcastle","Nottm Forest","Sheffield United"))
-eplsquad2$Squad <- mgsub(eplsquad2$Squad,c("Luton Town","Manchester City","Manchester Utd","Newcastle Utd","Nott'ham Forest","Sheffield Utd"),c("Luton","Man City","Man United","Newcastle","Nottm Forest","Sheffield United"))
-
-bundesligasquad$Squad <- mgsub(bundesligasquad$Squad,c("Darmstadt 98","Eint Frankfurt","Köln","M'Gladbach"),c("Darmstadt","Ein Frankfurt","FC Koln","Mgladbach"))
-bundesligasquad2$Squad <- mgsub(bundesligasquad2$Squad,c("Darmstadt 98","Eint Frankfurt","Köln","M'Gladbach"),c("Darmstadt","Ein Frankfurt","FC Koln","Mgladbach"))
+bundesligasquad$Squad <- mgsub(bundesligasquad$Squad,c("Mainz 05","Eint Frankfurt","St. Pauli","M'Gladbach","Gladbach"),c("Mainz","Ein Frankfurt","St Pauli","Mgladbach","Mgladbach"))
+bundesligasquad2$Squad <- mgsub(bundesligasquad2$Squad,c("Mainz 05","Eint Frankfurt","St. Pauli","M'Gladbach","Gladbach"),c("Mainz","Ein Frankfurt","St Pauli","Mgladbach","Mgladbach"))
 
 serieasquad$Squad <- mgsub(serieasquad$Squad,c("Hellas Verona"),c("Verona"))
 serieasquad2$Squad <- mgsub(serieasquad2$Squad,c("Hellas Verona"),c("Verona"))
 
-laligasquad$Squad <- mgsub(laligasquad$Squad,c("Alavés","Almería","Athletic Club","Atlético Madrid","Cádiz","Celta Vigo","Rayo Vallecano","Real Sociedad"),c("Alaves","Almeria","Ath Bilbao","Ath Madrid","Cadiz","Celta","Vallecano","Sociedad"))
-laligasquad2$Squad <- mgsub(laligasquad2$Squad,c("Alavés","Almería","Athletic Club","Atlético Madrid","Cádiz","Celta Vigo","Rayo Vallecano","Real Sociedad"),c("Alaves","Almeria","Ath Bilbao","Ath Madrid","Cadiz","Celta","Vallecano","Sociedad"))
+laligasquad$Squad <- mgsub(laligasquad$Squad,c("Alavés","Almería","Athletic Club","Atlético Madrid","Cádiz","Celta Vigo","Rayo Vallecano","Real Sociedad","Leganés"),c("Alaves","Almeria","Ath Bilbao","Ath Madrid","Cadiz","Celta","Vallecano","Sociedad","Leganes"))
+laligasquad2$Squad <- mgsub(laligasquad2$Squad,c("Alavés","Almería","Athletic Club","Atlético Madrid","Cádiz","Celta Vigo","Rayo Vallecano","Real Sociedad","Leganés"),c("Alaves","Almeria","Ath Bilbao","Ath Madrid","Cadiz","Celta","Vallecano","Sociedad","Leganes"))
 
-ligueonesquad$Squad <- mgsub(ligueonesquad$Squad,c("Paris S-G"),c("Paris SG"))
-ligueonesquad2$Squad <- mgsub(ligueonesquad2$Squad,c("Paris S-G"),c("Paris SG"))
+ligueonesquad$Squad <- mgsub(ligueonesquad$Squad,c("Paris S-G","Saint-Étienne"),c("Paris SG","St Etienne"))
+ligueonesquad2$Squad <- mgsub(ligueonesquad2$Squad,c("Paris S-G","Saint-Étienne"),c("Paris SG","St Etienne"))
 
 
 
