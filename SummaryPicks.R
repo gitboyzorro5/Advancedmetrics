@@ -77,7 +77,7 @@ for(i1_sn in 1:19){
 #
 #SP1
 #SP1
-View(df)
+
 final_doublefixture_i1
 final_doublefixture_f1[f1_sn,1]
 final_doublefixture_sp1[sp1_sn,1]
