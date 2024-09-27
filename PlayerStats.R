@@ -396,15 +396,15 @@ write.xlsx(sc0squad2,"sc0squad2.xlsx" ,sheetName = "data2")
 ################################################################################################################################################################################
 ################################################################################################################################################################################
 #E1PLAYERDATA
-urls = c('https://fbref.com/en/comps/10/2023-2024/stats/2023-2024-Championship-Stats',
-         'https://fbref.com/en/comps/10/2023-2024/shooting/2023-2024-Championship-Stats',
-         'https://fbref.com/en/comps/10/2023-2024/passing/2023-2024-Championship-Stats',
-         'https://fbref.com/en/comps/10/2023-2024/passing_types/2023-2024-Championship-Stats',
-         'https://fbref.com/en/comps/10/2023-2024/defense/2023-2024-Championship-Stats',
-         'https://fbref.com/en/comps/10/2023-2024/gca/2023-2024-Championship-Stats',
-         'https://fbref.com/en/comps/10/2023-2024/possession/2023-2024-Championship-Stats',
-         'https://fbref.com/en/comps/10/2023-2024/playingtime/2023-2024-Championship-Stats',
-         'https://fbref.com/en/comps/10/2023-2024/misc/2023-2024-Championship-Stats')
+urls = c('https://fbref.com/en/comps/10/stats/Championship-Stats',
+         'https://fbref.com/en/comps/10/shooting/Championship-Stats',
+         'https://fbref.com/en/comps/10/passing/Championship-Stats',
+         'https://fbref.com/en/comps/10/passing_types/Championship-Stats',
+         'https://fbref.com/en/comps/10/defense/Championship-Stats',
+         'https://fbref.com/en/comps/10/gca/Championship-Stats',
+         'https://fbref.com/en/comps/10/possession/Championship-Stats',
+         'https://fbref.com/en/comps/10/playingtime/Championship-Stats',
+         'https://fbref.com/en/comps/10/misc/Championship-Stats')
 
 html_resp <- GET(urls[1])
 html <- content(html_resp, as = "text") %>% stringr::str_remove_all("(<!--|-->)") %>% read_html()

@@ -194,6 +194,20 @@ for(sc0_sn in 1:11){
   write.xlsx(temp_players,file.path(path,paste(final_doublefixture_sc0[sc0_sn,1],final_doublefixture_sc0[sc0_sn + 1,1],"squad.xlsx",sep = "_")))
 
 }
+#E1
+unlink('Squads/E1/*')
+for(e1_sn in 1:23){
+  df <- e1squad2[e1squad2$Squad == final_doublefixture_e1[e1_sn,1],]
+
+  df2 <- e1squad2[e1squad2$Squad == final_doublefixture_e1[e1_sn + 1,1],]
+
+  temp_players <- rbind(df,df2)
+  temp_players <- temp_players[order(temp_players$YCrd, decreasing = T),]
+
+  path = "C:\\Users\\Kovan\\Advancedmetrics\\Squads\\E1"
+  write.xlsx(temp_players,file.path(path,paste(final_doublefixture_e1[e1_sn,1],final_doublefixture_e1[e1_sn + 1,1],"squad.xlsx",sep = "_")))
+
+}
 
 
 
@@ -209,30 +223,27 @@ for(sc0_sn in 1:11){
 
 unique(sort(playerdata$Squad))
 ###############individual team name#######################################
-# library(xlsx)
-# df <- playerdata[playerdata$Squad == "Manchester City",]
-# df2 <- playerdata[playerdata$Squad == "Brighton",]
-#
-# ef <- playerdata2[playerdata2$Squad == "Manchester City",]
-# ef2 <- playerdata2[playerdata2$Squad == "Brighton",]
-#
-# temp_players <- rbind(df,df2)
-# temp_players <- temp_players[order(temp_players$YCrd, decreasing = T),]
-#
-# etemp_players <- rbind(ef,ef2)
-# etemp_players <- etemp_players[order(etemp_players$Gls, decreasing = T),]
-#
-#
-# write.xlsx(temp_players,'Temp/brightoncity.xlsx')
-# write.xlsx(etemp_players,'Temp/brightoncity.xlsx',sheetName = "sheet2",append = TRUE)
+library(xlsx)
+df <- playerdata[playerdata$Squad == "Roma",]
+df2 <- playerdata[playerdata$Squad == "Athletic Club",]
+
+ef <- playerdata2[playerdata2$Squad == "Roma",]
+ef2 <- playerdata2[playerdata2$Squad == "Athletic Club",]
+
+temp_players <- rbind(df,df2)
+temp_players <- temp_players[order(temp_players$YCrd, decreasing = T),]
+
+etemp_players <- rbind(ef,ef2)
+etemp_players <- etemp_players[order(etemp_players$Gls, decreasing = T),]
+
+
+write.xlsx(temp_players,'Temp/RomaBilbao.xlsx', sheetName = "squad1",append = TRUE)
+write.xlsx(etemp_players,'Temp/RomaBilbao.xlsx',sheetName = "squad2",append = TRUE)
 
 
 
 
-
-
-
-
+sort(unique(playerdata$Squad))
 
 
 

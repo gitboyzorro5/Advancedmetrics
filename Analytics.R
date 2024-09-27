@@ -997,17 +997,17 @@ BIGFIVE <- rbind(E0_bigfive,D1_bigfive,I1_bigfive,SP1_bigfive,F1_bigfive)
 #add firstYCdiff
 BIGFIVE$First_YCDiff <- abs(BIGFIVE$match_First_YCTime - BIGFIVE$Away_first_YCTime)
 
-unlink('BIGFIVE20232024.xlsx')
-write.xlsx(BIGFIVE,'BIGFIVE20232024.xlsx')
+unlink('BIGFIVE20242025.xlsx')
+write.xlsx(BIGFIVE,'BIGFIVE20242025.xlsx')
 #OTHER LEAGUES
 OTHER_LEAGUES <- rbind(B1_analytics,D2_analytics,E1_analytics)
-unlink('OTHERLEAGUES20232024.xlsx')
-write.xlsx(OTHER_LEAGUES,'OTHERLEAGUES20232024.xlsx')
+unlink('OTHERLEAGUES20242025.xlsx')
+write.xlsx(OTHER_LEAGUES,'OTHERLEAGUES20242025.xlsx')
 
 ####################################################################################################################################################################
 ####################################################################################################################################################################
 #big five analytics
-BIGFIVE_analytics <- readxl::read_excel('BIGFIVE20232024.xlsx')
+BIGFIVE_analytics <- readxl::read_excel('BIGFIVE20242025.xlsx')
 BIGFIVE_analytics <- BIGFIVE_analytics[,-1]
 BIGFIVE_analytics <- as.data.frame(BIGFIVE_analytics)
 
