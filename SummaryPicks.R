@@ -156,9 +156,9 @@ colnames(F1_advstats)[41] <- "Shirts"
 
 UCL_advstats <- rbind(D1_advstats,I1_advstats,E0_advstats,F1_advstats,SP1_advstats)
 
-df <- tail(UCL_advstats[UCL_advstats$HomeTeam == "Roma" | UCL_advstats$AwayTeam == "Roma",],advstatsn)
+df <- tail(UCL_advstats[UCL_advstats$HomeTeam == "Nice" | UCL_advstats$AwayTeam == "Nice",],advstatsn)
 
-df2 <- tail(UCL_advstats[UCL_advstats$HomeTeam == "Ath Bilbao" | UCL_advstats$AwayTeam == "Ath Bilbao",],advstatsn)
+df2 <- tail(UCL_advstats[UCL_advstats$HomeTeam == "Lazio" | UCL_advstats$AwayTeam == "Lazio",],advstatsn)
 
 temp_analysis <- rbind(df,df2)
 
@@ -170,7 +170,7 @@ temp_sliced <- temp_sliced[1:38]
 temp_analyis_combined <- c(temp_sliced,temp_colmeans)
 temp_analysis <- rbind(temp_analysis,temp_analyis_combined)
 
-write.xlsx(temp_analysis,"Temp/RomaBilbao.xlsx")
+#write.xlsx(temp_analysis,"Temp/NiceLazio.xlsx")
 
 sort(unique(UCL_advstats$HomeTeam))
 

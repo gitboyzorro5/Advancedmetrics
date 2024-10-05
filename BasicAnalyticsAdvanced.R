@@ -131,5 +131,6 @@ write.xlsx(ligueone_first_matchgoal,'ligueone_first_matchgoal.xlsx')
 bigfive_first_matchgoal <- rbind(epl_first_matchgoal,bundes_first_matchgoal,seriea_first_matchgoal,laliga_first_matchgoal,ligueone_first_matchgoal)
 BIGFIVE_analytics <- readxl::read_excel('BIGFIVE20232024.xlsx')
 BIGFIVE_analytics <- BIGFIVE_analytics[,-1]
+colnames(BIGFIVE_analytics)
 ##################################################################################################################
-sqldf("SELECT Div,COUNT(*) FROM BIGFIVE_analytics WHERE Match_First_GoalTime BETWEEN '1' and '45' GROUP BY DIV ORDER BY COUNT(*) DESC")
+sqldf("SELECT match_First_YCTime,COUNT(*) FROM BIGFIVE_analytics GROUP BY match_First_YCTime ORDER BY COUNT(*) DESC")

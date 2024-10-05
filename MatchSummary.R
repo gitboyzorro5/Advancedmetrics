@@ -8,13 +8,13 @@ Sys.setenv(JAVA_HOME ="C:\\Program Files\\Java\\jre1.8.0_221")
 options(java.parameters = "-Xmx4g")
 
 #first time reading
-# epl_match_urls <- fb_match_urls(country = "ENG", gender = "M", season_end_year = 2025, tier="1st")
-# epl_summary <- fb_match_summary(match_url = epl_match_urls)
-#
-# unlink('epl_summary.xlsx')
-# unlink('epl_match_urls.xlsx')
-# write.xlsx(epl_summary,"epl_summary.xlsx")
-# write.xlsx(epl_match_urls,'epl_match_urls.xlsx')
+epl_match_urls <- fb_match_urls(country = "ENG", gender = "M", season_end_year = 2025, tier="1st")
+epl_summary <- fb_match_summary(match_url = epl_match_urls)
+
+unlink('epl_summary.xlsx')
+unlink('epl_match_urls.xlsx')
+write.xlsx(epl_summary,"epl_summary.xlsx")
+write.xlsx(epl_match_urls,'epl_match_urls.xlsx')
 
 #second time reading algorithm
 #first read current rows in epl_match_urls.xlsx
@@ -203,12 +203,12 @@ write.xlsx(EPL_spread,'EPL_SPREAD.xlsx')
 ####################################################################################################
 #Bundesliga
 
-# bundes_match_urls <- fb_match_urls(country = "GER", gender = "M", season_end_year = 2025, tier="1st")
-# bundes_summary <- fb_match_summary(match_url = bundes_match_urls)
-# unlink('bundes_summary.xlsx')
-# unlink('bundes_match_urls')
-# write.xlsx(bundes_summary,"bundes_summary.xlsx")
-# write.xlsx(bundes_match_urls,'bundes_match_urls.xlsx')
+bundes_match_urls <- fb_match_urls(country = "GER", gender = "M", season_end_year = 2025, tier="1st")
+bundes_summary <- fb_match_summary(match_url = bundes_match_urls)
+unlink('bundes_summary.xlsx')
+unlink('bundes_match_urls')
+write.xlsx(bundes_summary,"bundes_summary.xlsx")
+write.xlsx(bundes_match_urls,'bundes_match_urls.xlsx')
 #second time reading algorithm
 #first read current rows in bundes_match_urls.xlsx
 #read total rows in fbref bundes_match_urls from fb_match_urls function
@@ -398,12 +398,12 @@ write.xlsx(BUNDES_spread,'BUNDES_SPREAD.xlsx')
 
 ######################################################################################################################
 #seriea
-# seriea_match_urls <- fb_match_urls(country = "ITA", gender = "M", season_end_year = 2025, tier="1st")
-# seriea_summary <- fb_match_summary(match_url = seriea_match_urls)
-# unlink('seriea_summary')
-# unlink('seriea_match_urls.xlsx')
-# write.xlsx(seriea_summary,"seriea_summary.xlsx")
-# write.xlsx(seriea_match_urls,'seriea_match_urls.xlsx')
+seriea_match_urls <- fb_match_urls(country = "ITA", gender = "M", season_end_year = 2025, tier="1st")
+seriea_summary <- fb_match_summary(match_url = seriea_match_urls)
+unlink('seriea_summary')
+unlink('seriea_match_urls.xlsx')
+write.xlsx(seriea_summary,"seriea_summary.xlsx")
+write.xlsx(seriea_match_urls,'seriea_match_urls.xlsx')
 #second time reading algorithm
 #first read current rows in seriea_match_urls.xlsx
 #read total rows in fbref seriea_match_urls from fb_match_urls function
@@ -590,13 +590,13 @@ write.xlsx(SERIEA_spread,'SERIEA_SPREAD.xlsx')
 ###################################################################################################################################################
 ###################################################################################################################################################
 #Laliga
-# laliga_match_urls <- fb_match_urls(country = "ESP", gender = "M", season_end_year = 2025, tier="1st")
-# laliga_summary <- fb_match_summary(match_url = laliga_match_urls)
-#
-# unlink('laliga_summary')
-# unlink('laliga_match_urls')
-# write.xlsx(laliga_summary,"laliga_summary.xlsx")
-# write.xlsx(laliga_match_urls,'laliga_match_urls.xlsx')
+laliga_match_urls <- fb_match_urls(country = "ESP", gender = "M", season_end_year = 2025, tier="1st")
+laliga_summary <- fb_match_summary(match_url = laliga_match_urls)
+
+unlink('laliga_summary')
+unlink('laliga_match_urls')
+write.xlsx(laliga_summary,"laliga_summary.xlsx")
+write.xlsx(laliga_match_urls,'laliga_match_urls.xlsx')
 #second time reading algorithm
 #first read current rows in laliga_match_urls.xlsx
 #read total rows in fbref laliga_match_urls from fb_match_urls function
@@ -783,13 +783,13 @@ write.xlsx(LALIGA_spread,'LALIGA_SPREAD.xlsx')
 ################################################################################################################
 ################################################################################################################
 #Ligue one
-# ligueone_match_urls <- fb_match_urls(country = "FRA", gender = "M", season_end_year = 2025, tier="1st")
-# ligueone_summary <- fb_match_summary(match_url = ligueone_match_urls)
-#
-# unlink('ligueone_summary.xlsx')
-# unlink('ligueone_match_urls.xlsx')
-# write.xlsx(ligueone_summary,"ligueone_summary.xlsx")
-# write.xlsx(ligueone_match_urls,'ligueone_match_urls.xlsx')
+ligueone_match_urls <- fb_match_urls(country = "FRA", gender = "M", season_end_year = 2025, tier="1st")
+ligueone_summary <- fb_match_summary(match_url = ligueone_match_urls)
+
+unlink('ligueone_summary.xlsx')
+unlink('ligueone_match_urls.xlsx')
+write.xlsx(ligueone_summary,"ligueone_summary.xlsx")
+write.xlsx(ligueone_match_urls,'ligueone_match_urls.xlsx')
 #second time reading algorithm
 #first read current rows in ligueone_match_urls.xlsx
 #read total rows in fbref ligueone_match_urls from fb_match_urls function
@@ -981,42 +981,47 @@ write.xlsx(LIGUEONE_spread,'LIGUEONE_SPREAD.xlsx')
 #CREATE FINAL SPREAD
 E0_spreaducl <- readxl::read_excel('../Rsoccer/E0_spread.xlsx')
 E0_spreaducl <- E0_spreaducl[,c(-1)]
+E0_spreaducl <- as.data.frame(E0_spreaducl)
 
 E0_advstats <- readxl::read_excel('EPL_SPREAD.xlsx')
 E0_advstats <- E0_advstats[,-1]
-EPL_FINALSPREAD <- dplyr::left_join(E0_spreaducl,EPL_spread)
+E0_advstats <- as.data.frame(E0_advstats)
+EPL_FINALSPREAD <- dplyr::left_join(E0_spreaducl,E0_advstats)
 EPL_FINALSPREAD <- EPL_FINALSPREAD %>% dplyr::relocate(51,.after = 37)
 unlink('EPL_FINALSPREAD')
 write.xlsx(EPL_FINALSPREAD,'EPL_FINALSPREAD.xlsx')
 ###################################################################################################################################
 D1_spreaducl <- readxl::read_excel('../Rsoccer/D1_spread.xlsx')
 D1_spreaducl <- D1_spreaducl[,c(-1)]
-
+D1_spreaducl <- as.data.frame(D1_spreaducl)
 D1_advstats <- readxl::read_excel('BUNDES_SPREAD.xlsx')
 D1_advstats <- D1_advstats[,-1]
-BUNDES_FINALSPREAD <- dplyr::left_join(D1_spreaducl,BUNDES_spread)
+D1_advstats <- as.data.frame(D1_advstats)
+BUNDES_FINALSPREAD <- dplyr::left_join(D1_spreaducl,D1_advstats)
 BUNDES_FINALSPREAD <- BUNDES_FINALSPREAD %>% dplyr::relocate(51,.after = 37)
 unlink('BUNDES_FINALSPREAD')
 write.xlsx(BUNDES_FINALSPREAD,'BUNDES_FINALSPREAD.xlsx')
 #####################################################################################################################################
 I1_spreaducl <- readxl::read_excel('../Rsoccer/I1_spread.xlsx')
 I1_spreaducl <- I1_spreaducl[,c(-1)]
-
+I1_spreaducl <- as.data.frame(I1_spreaducl)
 I1_advstats <- readxl::read_excel('SERIEA_SPREAD.xlsx')
 I1_advstats <- I1_advstats[,-1]
-SERIEA_FINALSPREAD <- dplyr::left_join(I1_spreaducl,SERIEA_spread)
+I1_advstats <- as.data.frame(I1_advstats)
+SERIEA_FINALSPREAD <- dplyr::left_join(I1_spreaducl,I1_advstats)
 SERIEA_FINALSPREAD <- SERIEA_FINALSPREAD %>% dplyr::relocate(51,.after = 37)
-View(SERIEA_FINALSPREAD)
+
 unlink('SERIEA_FINALSPREAD')
 write.xlsx(SERIEA_FINALSPREAD,'SERIEA_FINALSPREAD.xlsx')
 
 #####################################################################################################################################
 SP1_spreaducl <- readxl::read_excel('../Rsoccer/SP1_spread.xlsx')
 SP1_spreaducl <- SP1_spreaducl[,c(-1)]
-
+SP1_spreaducl <- as.data.frame(SP1_spreaducl)
 SP1_advstats <- readxl::read_excel('LALIGA_SPREAD.xlsx')
 SP1_advstats <- SP1_advstats[,-1]
-LALIGA_FINALSPREAD <- dplyr::left_join(SP1_spreaducl,LALIGA_spread)
+SP1_advstats <- as.data.frame(SP1_advstats)
+LALIGA_FINALSPREAD <- dplyr::left_join(SP1_spreaducl,SP1_advstats)
 LALIGA_FINALSPREAD <- LALIGA_FINALSPREAD %>% dplyr::relocate(51,.after = 37)
 unlink('LALIGA_FINALSPREAD')
 write.xlsx(LALIGA_FINALSPREAD,'LALIGA_FINALSPREAD.xlsx')
@@ -1024,10 +1029,11 @@ write.xlsx(LALIGA_FINALSPREAD,'LALIGA_FINALSPREAD.xlsx')
 #CREATE FINAL SPREAD
 F1_spreaducl <- readxl::read_excel('../Rsoccer/F1_spread.xlsx')
 F1_spreaducl <- F1_spreaducl[,c(-1)]
-
+F1_spreaducl <- as.data.frame(F1_spreaducl)
 F1_advstats <- readxl::read_excel('LIGUEONE_SPREAD.xlsx')
 F1_advstats <- F1_advstats[,-1]
-LIGUEONE_FINALSPREAD <- dplyr::left_join(F1_spreaducl,LIGUEONE_spread)
+F1_advstats <- as.data.frame(F1_advstats)
+LIGUEONE_FINALSPREAD <- dplyr::left_join(F1_spreaducl,F1_advstats)
 LIGUEONE_FINALSPREAD <- LIGUEONE_FINALSPREAD %>% dplyr::relocate(51,.after = 37)
 unlink('LIGUEONE_FINALSPREAD')
 write.xlsx(LIGUEONE_FINALSPREAD,'LIGUEONE_FINALSPREAD.xlsx')
