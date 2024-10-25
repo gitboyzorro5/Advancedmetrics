@@ -56,7 +56,7 @@ T1_schedule20242025 <- T1_schedule20242025[,c(-1)]
 #parse the dates
 B1_schedule20242025$Date <- ymd(B1_schedule20242025$Date)
 D1_schedule20242025$Date <- ymd(D1_schedule20242025$Date)
-D2_schedule20242025$Date <- ymd(D2_schedule20242025$Date)
+D2_schedule20242025$Date <- dmy(D2_schedule20242025$Date)
 E0_schedule20242025$Date <- ymd(E0_schedule20242025$Date)
 E1_schedule20242025$Date <- ymd(E1_schedule20242025$Date)
 E2_schedule20242025$Date <- ymd(E2_schedule20242025$Date)
@@ -107,7 +107,7 @@ T1_schedule20242025$Date <- ymd(T1_schedule20242025$Date)
 
 all_schedule20242025 <- rbind(B1_schedule20242025,E0_schedule20242025,D1_schedule20242025,D2_schedule20242025,E1_schedule20242025,E2_schedule20242025,E3_schedule20242025,EC_schedule20242025,F1_schedule20242025,F2_schedule20242025,G1_schedule20242025,I1_schedule20242025,I2_schedule20242025,N1_schedule20242025,SP1_schedule20242025,SC0_schedule20242025,SC1_schedule20242025,SC2_schedule20242025,SC3_schedule20242025,SP2_schedule20242025,T1_schedule20242025,P1_schedule20242025)
 
-myfixtures <- all_schedule20242025[all_schedule20242025$Date >= '2024-10-04' & all_schedule20242025$Date <= '2024-10-07',]
+myfixtures <- all_schedule20242025[all_schedule20242025$Date >= '2024-10-25' & all_schedule20242025$Date <= '2024-10-28',]
 
 write.csv(myfixtures,'myfixtures.csv')
 View(myfixtures)
