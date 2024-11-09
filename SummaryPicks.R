@@ -154,21 +154,21 @@ colnames(SP1_advstats)[41] <- "Shirts"
 colnames(F1_advstats)[39] <- "Total_Goalmins"
 colnames(F1_advstats)[41] <- "Shirts"
 
-UCL_advstats <- rbind(D1_advstats,I1_advstats,E0_advstats,F1_advstats,SP1_advstats)
-
-df <- tail(UCL_advstats[UCL_advstats$HomeTeam == "Nice" | UCL_advstats$AwayTeam == "Nice",],advstatsn)
-
-df2 <- tail(UCL_advstats[UCL_advstats$HomeTeam == "Lazio" | UCL_advstats$AwayTeam == "Lazio",],advstatsn)
-
-temp_analysis <- rbind(df,df2)
-
-temp_analysis <- as.data.frame(temp_analysis)
-temp_colmeans <- colMeans(temp_analysis[,c(39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83)])
-temp_sliced <- tail(temp_analysis,1)
-temp_sliced <- temp_sliced[1:38]
-
-temp_analyis_combined <- c(temp_sliced,temp_colmeans)
-temp_analysis <- rbind(temp_analysis,temp_analyis_combined)
+# UCL_advstats <- rbind(D1_advstats,I1_advstats,E0_advstats,F1_advstats,SP1_advstats)
+#
+# df <- tail(UCL_advstats[UCL_advstats$HomeTeam == "Nice" | UCL_advstats$AwayTeam == "Nice",],advstatsn)
+#
+# df2 <- tail(UCL_advstats[UCL_advstats$HomeTeam == "Lazio" | UCL_advstats$AwayTeam == "Lazio",],advstatsn)
+#
+# temp_analysis <- rbind(df,df2)
+#
+# temp_analysis <- as.data.frame(temp_analysis)
+# temp_colmeans <- colMeans(temp_analysis[,c(39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83)])
+# temp_sliced <- tail(temp_analysis,1)
+# temp_sliced <- temp_sliced[1:38]
+#
+# temp_analyis_combined <- c(temp_sliced,temp_colmeans)
+# temp_analysis <- rbind(temp_analysis,temp_analyis_combined)
 
 #write.xlsx(temp_analysis,"Temp/NiceLazio.xlsx")
 
