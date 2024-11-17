@@ -172,7 +172,7 @@ colnames(F1_advstats)[41] <- "Shirts"
 
 #write.xlsx(temp_analysis,"Temp/NiceLazio.xlsx")
 
-sort(unique(UCL_advstats$HomeTeam))
+#sort(unique(UCL_advstats$HomeTeam))
 
 
 
