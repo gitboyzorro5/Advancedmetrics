@@ -64,4 +64,4 @@ sc3_teams <- sort(unique(SC3$HomeTeam))
 sp1_teams <- sort(unique(SP1$HomeTeam))
 sp2_teams <- sort(unique(SP2$HomeTeam))
 t1_teams <- sort(unique(T1$HomeTeam))
-
+View(allteams20242025)
