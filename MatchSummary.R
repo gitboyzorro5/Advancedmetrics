@@ -232,7 +232,7 @@ write.xlsx(bundes_summary,"bundes_summary.xlsx")
 current_bundes_match_urls <- fb_match_urls(country = "GER", gender = "M", season_end_year = 2025, tier="1st")
 unlink('bundes_match_urls.xlsx')
 write.xlsx(current_bundes_match_urls,'bundes_match_urls.xlsx')
-View(current_bundes_match_urls)
+
 
 #reading and writing
 bundes_summary <- readxl::read_excel('bundes_summary.xlsx')
